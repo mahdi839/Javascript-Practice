@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mahdi">hasan</p>
+   
+     
+    <div id="parent">
+        parent
+        <div data-name="hey mahdi. you will be a great programmer" id="child">
+            child
+            <button  id="check">closest</button>
+        </div>
+    </div>
+    <button onclick="myFunc()">click</button>
+      
+      <script>
+         function myFunc (){
+            
+             let check = document.getElementById("check")
+             let paragraph = document.getElementById("mahdi")
+             let closest = check.closest('div')
+             let data = closest.getAttribute("data-name")
+             paragraph.innerHTML = data
+
+         }
+      </script>
+      
+</body>
+</html>
